@@ -30,11 +30,22 @@ private:
 	GPIO_TypeDef *out_ports[amount] = {a_GPIO_Port, b_GPIO_Port, c_GPIO_Port, d_GPIO_Port, e_GPIO_Port, f_GPIO_Port, g_GPIO_Port, dp_GPIO_Port};
 	uint16_t out_pins[amount] = {a_Pin, b_Pin, c_Pin, d_Pin, e_Pin, f_Pin, g_Pin, dp_Pin};
 
+	void one();
+	void two();
+    void three();
+    void four();
+    void five();
+    void six();
+    void seven();
+    void eight();
+    void nine();
+    void zero();
+
 public:
 	void clear();
 	void set_port(int, int);
 	void show_number(int);
+    void checker();
 };
-
 
 #endif /* DISP7SEG_H_ */

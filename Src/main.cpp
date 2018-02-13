@@ -39,6 +39,7 @@
 #include "main.h"
 #include "stm32f3xx_hal.h"
 #include "gpio.h"
+#include "Disp7seg.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -91,12 +92,22 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
+  Disp7seg disp;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  disp.checker();
+
+	  for (int i = 9; i >= 0; --i) {
+		  disp.show_number(i);
+	  }
+
+	  disp.clear();
+
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
